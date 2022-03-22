@@ -9,12 +9,15 @@ We would like to thank the authors of [RapidJSON](https://github.com/Tencent/rap
 ## Citation
 If you find this work useful, please consider citing our paper.
 ```java
-@inproceedings{YiChienShihRA-L22,
-  author = {Yi-Chien Shih, Wei-Hsiang Liao, Wen-Chieh Lin, Sai-Keung Wong and Chieh-Chih Wang},
-  title = {{Reconstruction and Synthesis of Lidar Point Clouds of Spray}},
-  booktitle = {IEEE Robotics and Automation Letters (RA-L)},
-  year = {2021},
-}
+@ARTICLE{9705289,
+  author={Shih, Yi-Chien and Liao, Wei-Hsiang and Lin, Wen-Chieh and Wong, Sai-Keung and Wang, Chieh-Chih},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Reconstruction and Synthesis of Lidar Point Clouds of Spray}, 
+  year={2022},
+  volume={7},
+  number={2},
+  pages={3765-3772},
+  doi={10.1109/LRA.2022.3148443}}
 ```
 
 ## Overview
