@@ -1,11 +1,12 @@
+# Reconstruction and Synthesis of Lidar Point Clouds of Spray
 This is the official code release of the paper [Reconstruction and Synthesis of Lidar Point Clouds of Spray](https://ieeexplore.ieee.org/document/9705289) by Yi-Chien Shih, Wei-Hsiang Liao, Wen-Chieh Lin, Sai-Keung Wong and Chieh-Chih Wang.
 
-# License
+## License
 
-# Acknowledgments
+## Acknowledgments
 We would like to thank the authors of [RapidJSON](https://github.com/Tencent/rapidjson/), [KDTree](https://github.com/viliwonka/KDTree), [Pointcloud](https://github.com/MaikelH/Pointcloud), and [VehicleTools](https://github.com/Unity-Technologies/VehicleTools) for their great work.
 
-# Citation
+## Citation
 If you find this work useful, please consider citing our paper.
 ```java
 @inproceedings{YiChienShihRA-L22,
@@ -16,8 +17,8 @@ If you find this work useful, please consider citing our paper.
 }
 ```
 
-# Overview
-## Environment
+## Overview
+### Environment
 The code has been successfully tested on
 * CPU: Intel Core i7-8700
 * GPU: NVIDIA GeForce 1080
@@ -26,7 +27,7 @@ The code has been successfully tested on
 * Unity Version: 2021.1.7f1
 * Data sequences come from Waymo
 
-## File Organization
+### File Organization
 There are 3 folders in the zipped file. 
 1. DetectionAnalyzer
 2. SpraySimulation
@@ -67,9 +68,9 @@ Table 1 shows the corresponding implementation for the different steps. Note tha
     </tr>
 </table>
 
-# Getting Started
-## Simulation
-### Setup
+## Getting Started
+### Simulation
+#### Setup
 Before running the simulation, we have to set some parameters. Table 2 shows the meaning of global parameters, and Table 3 shows the parameters we use under different situations. Note that our configuration are palced at `SpraySimulation/Config`.
 
 <p class="tb-title">Table 2.</p>
@@ -212,7 +213,7 @@ Before running the simulation, we have to set some parameters. Table 2 shows the
     </tr>
 </table>
 
-### Usage
+#### Usage
 1. Open this folder with Unity.
 2. Open the scene named "SpraySimple".
 3. Check the parameters mentioned above.
@@ -248,7 +249,7 @@ Before running the simulation, we have to set some parameters. Table 2 shows the
     </tr>
 </table>
 
-## Data Processing - Synthesis
+### Data Processing - Synthesis
 * This part of details could apply to 2 systhesis scripts(i.e. `Tools/Synthesis_texture_based` and `Tools/Synthesis_particle_based`)
 * Before synthesizing, generate filter_nodup.txt first. The followings show the steps:
     1. Open `Tools/concat_file.py`
@@ -261,7 +262,7 @@ Before running the simulation, we have to set some parameters. Table 2 shows the
 * Other details (including in/output) are noted in main.cpp.
 * An example of filter_nodup.txt (i.e. output) is provided.
 
-## Data Processing - Global Refinement
+### Data Processing - Global Refinement
 * We rename the original .pcd files to ``<segment name>_<4 digit id>``. For example, rename `1518656408.389677047.pcd` to `segment-2974991090366925955_0000.pcd` or `seg29_0000.pcd`.
 * We use CloudCompare in this part. Please make sure you’ve downloaded it.
 * Set the following parameters in main.cpp before building
@@ -270,11 +271,11 @@ Before running the simulation, we have to set some parameters. Table 2 shows the
 * Other details (including in/output) are noted in main.cpp.
 * An example of filter.txt (i.e. output) is provided.
 
-## Data Augumentation
+### Data Augumentation
 * Main file location: `Tools/PCD_MergePointCloud`
 * Usage: Merge point clouds.
 * Other details are noted in main.cpp.
 * We use [RapidJSON](https://github.com/Tencent/rapidjson/) as the JSON parser.
 
-# Contributors
+## Contributors
 * [Yi Chien "Alan" Shih](https://github.com/alan0201tw)
