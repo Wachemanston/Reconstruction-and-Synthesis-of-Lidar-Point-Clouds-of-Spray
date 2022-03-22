@@ -1,6 +1,3 @@
-<style>
-    .tb-title { text-align: center; line-height: 1rem; padding-bottom: 0; margin-bottom: 0; }
-</style>
 This is the official code release of the paper [Reconstruction and Synthesis of Lidar Point Clouds of Spray](https://ieeexplore.ieee.org/document/9705289) by Yi-Chien Shih, Wei-Hsiang Liao, Wen-Chieh Lin, Sai-Keung Wong and Chieh-Chih Wang.
 
 # License
