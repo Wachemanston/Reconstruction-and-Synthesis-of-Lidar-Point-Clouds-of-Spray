@@ -4,7 +4,7 @@ This is the official code release of the paper [Reconstruction and Synthesis of 
 ## Acknowledgment
 This project refers to the manipulation of point cloud defined in [PointCloud](https://github.com/MaikelH/Pointcloud) by [MaikelH](https://github.com/MaikelH), which is licensed under LGPL-2.1. We didn't modify the content but included the data structure in this project.
 
-We would like to thank the authors of [RapidJSON](https://github.com/Tencent/rapidjson/) by [Tencent](https://github.com/Tencent), [KDTree](https://github.com/viliwonka/KDTree) by [Vili Volčini](https://github.com/viliwonka), and [VehicleTools](https://github.com/Unity-Technologies/VehicleTools) by [Unity Technologies](https://github.com/Unity-Technologies) for their great work. These 3 excellent projects are licensed under MIT.
+We would like to thank the authors of [RapidJSON](https://github.com/Tencent/rapidjson/)(MIT) by [Tencent](https://github.com/Tencent), [KDTree](https://github.com/viliwonka/KDTree)(MIT) by [Vili Volčini](https://github.com/viliwonka), [VehicleTools](https://github.com/Unity-Technologies/VehicleTools)(MIT) by [Unity Technologies](https://github.com/Unity-Technologies), and [datasacks](https://github.com/kurtdekker/datasacks)([BSD](https://github.com/kurtdekker/datasacks/blob/master/license_bsd.txt)) by [Kurt Dekker](https://github.com/kurtdekker) for their great work.
 
 ## Citation
 If you find this work useful, please consider citing our paper.
@@ -75,15 +75,25 @@ Table 1 shows the corresponding implementation for the different steps. Note tha
 
 ## Getting Started
 ### Simulation
-Please use Unity open this folder(i.e. SpraySimulation/) first.
-
 #### Setup
-Before running the simulation, we have to set some parameters. Table 2 shows the meaning of global parameters, and Table 3 shows the parameters we use under different situations. Note that our configuration are palced at `SpraySimulation/Config`.
+Before running the simulation, we have to set some parameters. Below is a template of `.env`. Table 2 lists the meaning of each global parameter, and Table 3 shows the parameters we use under different situations. Note that our configuration are palced at `SpraySimulation/Config`.
+```
+OutputPCDPath=
+OutputFilterPath=
+SprayDetectionJSONPath=
+SimAugmentConfig=../Config/SimAugmentConfig.txt
+NotSegmentedDataPath=
+ReconstructRefPath=
+ManipulationCheckConfig=../Config/ManipulationCheck.txt
+DefaultFilter=
+```
+Then link the 4 submodules installed eariler to (or copy to) the Assets folder (i.e. `SpraySimulation/Assets`).
 
+Finally, use Unity open this folder(i.e. SpraySimulation/) first.
 <p class="tb-title">Table 2.</p>
 <table>
     <tr>
-        <th colspan="2">Global parameters: see SpraySimulation/Assets/.env</th>
+        <th colspan="2">Global parameters: you should create a .env under <code>SpraySimulation/Assets/Scripts/</code></th>
     </tr>
     <tr>
         <td>OutputPCDPath</td>
@@ -118,6 +128,7 @@ Before running the simulation, we have to set some parameters. Table 2 shows the
         <td>The default folder stores default filter_nodup.txt/filter.txt. </td>
     </tr>
 </table>
+
 
 <p class="tb-title">Table 3. The game object is listed in Hierarchy window and attribute shows in Inspector window.</p>
 <table>
