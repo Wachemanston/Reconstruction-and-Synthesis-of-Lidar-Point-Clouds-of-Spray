@@ -1,14 +1,14 @@
 # Reconstruction and Synthesis of Lidar Point Clouds of Spray
-This is the official code release of the paper [Reconstruction and Synthesis of Lidar Point Clouds of Spray](https://ieeexplore.ieee.org/document/9705289) by Yi-Chien Shih, Wei-Hsiang Liao, Wen-Chieh Lin, Sai-Keung Wong and Chieh-Chih Wang.
+This is the official code release of the paper [Reconstruction and Synthesis of Lidar Point Clouds of Spray](https://ieeexplore.ieee.org/document/9705289) by Yi-Chien Shih, Wei-Hsiang Liao, Wen-Chieh Lin, Sai-Keung Wong and Chieh-Chih Wang, acceptd at IEEE Robotics and Automation Letters (RA-L) 2022.
 
-## License
+## Acknowledgment
+This project refers to the manipulation of point cloud defined in [PointCloud](https://github.com/MaikelH/Pointcloud) by [MaikelH](https://github.com/MaikelH), which is licensed under LGPL-2.1. We didn't modify the content but included the data structure in this project.
 
-## Acknowledgments
-We would like to thank the authors of [RapidJSON](https://github.com/Tencent/rapidjson/), [KDTree](https://github.com/viliwonka/KDTree), [Pointcloud](https://github.com/MaikelH/Pointcloud), and [VehicleTools](https://github.com/Unity-Technologies/VehicleTools) for their great work.
+We would like to thank the authors of [RapidJSON](https://github.com/Tencent/rapidjson/) by [Tencent](https://github.com/Tencent), [KDTree](https://github.com/viliwonka/KDTree) by [Vili Volčini](https://github.com/viliwonka), and [VehicleTools](https://github.com/Unity-Technologies/VehicleTools) by [Unity Technologies](https://github.com/Unity-Technologies) for their great work. These 3 excellent projects are licensed under MIT.
 
 ## Citation
 If you find this work useful, please consider citing our paper.
-```java
+```css
 @ARTICLE{9705289,
   author={Shih, Yi-Chien and Liao, Wei-Hsiang and Lin, Wen-Chieh and Wong, Sai-Keung and Wang, Chieh-Chih},
   journal={IEEE Robotics and Automation Letters}, 
@@ -29,6 +29,8 @@ The code has been successfully tested on
 * OS: Ubuntu 18.04
 * Unity Version: 2021.1.7f1
 * Data sequences come from Waymo
+
+Remember to install submodules listed in `.gitmodules`.
 
 ### File Organization
 There are 3 folders in the zipped file. 
@@ -73,6 +75,8 @@ Table 1 shows the corresponding implementation for the different steps. Note tha
 
 ## Getting Started
 ### Simulation
+Please use Unity open this folder(i.e. SpraySimulation/) first.
+
 #### Setup
 Before running the simulation, we have to set some parameters. Table 2 shows the meaning of global parameters, and Table 3 shows the parameters we use under different situations. Note that our configuration are palced at `SpraySimulation/Config`.
 
@@ -253,6 +257,7 @@ Before running the simulation, we have to set some parameters. Table 2 shows the
 </table>
 
 ### Data Processing - Synthesis
+* This part should be build executed through the terminal.
 * This part of details could apply to 2 systhesis scripts(i.e. `Tools/Synthesis_texture_based` and `Tools/Synthesis_particle_based`)
 * Before synthesizing, generate filter_nodup.txt first. The followings show the steps:
     1. Open `Tools/concat_file.py`
@@ -266,6 +271,7 @@ Before running the simulation, we have to set some parameters. Table 2 shows the
 * An example of filter_nodup.txt (i.e. output) is provided.
 
 ### Data Processing - Global Refinement
+* This part should be build executed through the terminal.
 * We rename the original .pcd files to ``<segment name>_<4 digit id>``. For example, rename `1518656408.389677047.pcd` to `segment-2974991090366925955_0000.pcd` or `seg29_0000.pcd`.
 * We use CloudCompare in this part. Please make sure you’ve downloaded it.
 * Set the following parameters in main.cpp before building
@@ -275,10 +281,11 @@ Before running the simulation, we have to set some parameters. Table 2 shows the
 * An example of filter.txt (i.e. output) is provided.
 
 ### Data Augumentation
+* This part should be build executed through the terminal.
 * Main file location: `Tools/PCD_MergePointCloud`
 * Usage: Merge point clouds.
 * Other details are noted in main.cpp.
 * We use [RapidJSON](https://github.com/Tencent/rapidjson/) as the JSON parser.
 
-## Contributors
+## Contributor
 * [Yi Chien "Alan" Shih](https://github.com/alan0201tw)
