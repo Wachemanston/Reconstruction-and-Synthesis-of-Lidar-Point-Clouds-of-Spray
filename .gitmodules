@@ -1,12 +1,12 @@
-[submodule "Submodules/UnityVehicleTools"]
+[submodule "SpraySimulation/Submodules/UnityVehicleTools"]
 	path = Submodules/UnityVehicleTools
 	url = https://github.com/Unity-Technologies/VehicleTools.git
-[submodule "Submodules/KDTree"]
+[submodule "SpraySimulation/Submodules/KDTree"]
 	path = Submodules/KDTree
 	url = https://github.com/viliwonka/KDTree.git
-[submodule "Submodules/PointCloud"]
+[submodule "SpraySimulation/Submodules/PointCloud"]
 	path = Submodules/PointCloud
 	url = https://github.com/MaikelH/Pointcloud.git
-[submodule "Submodules/datasacks"]
+[submodule "SpraySimulation/Submodules/datasacks"]
 	path = Submodules/datasacks
 	url = https://github.com/kurtdekker/datasacks.git
