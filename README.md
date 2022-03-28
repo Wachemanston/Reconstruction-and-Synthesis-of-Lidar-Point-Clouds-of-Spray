@@ -76,7 +76,7 @@ Table 1 shows the corresponding implementation for the different steps. Note tha
 ## Getting Started
 ### Simulation
 #### Setup
-Before running the simulation, we have to set some parameters. Below is a template of `.env`. Table 2 lists the meaning of each global parameter, and Table 3 shows the parameters we use under different situations. Note that our configuration are palced at `SpraySimulation/Config`.
+Before running the simulation, we have to set some parameters. Below is a template of `.env`. Table 2 lists the meaning of each global parameter. Note that our configuration are palced at `SpraySimulation/Config`.
 ```
 OutputPCDPath=
 OutputFilterPath=
@@ -87,9 +87,12 @@ ReconstructRefPath=
 ManipulationCheckConfig=../Config/ManipulationCheck.txt
 DefaultFilter=
 ```
-Create Plugins folder under Assets folder. Then create symbolic links for the 4 submodules installed eariler to (or copy to) the Assets/Plugins folder (i.e. `SpraySimulation/Assets`). The corresponding links show in table 5.
+Create Plugins folder under Assets folder. Then create symbolic links for the 4 submodules installed eariler to (or copy to) the Assets/Plugins folder (i.e. `SpraySimulation/Assets`). The corresponding links show in table 3.
 
-Finally, use Unity open this folder(i.e. SpraySimulation/) first.
+Next, use Unity open this folder(i.e. SpraySimulation/).
+
+If you open the project with safe mode, something is wrong. Please deal with them at first. Now it is time to start simulation. Table 4 shows the parameters we use under different simulation situations.
+
 <p class="tb-title">Table 2.</p>
 <table>
     <tr>
@@ -129,8 +132,31 @@ Finally, use Unity open this folder(i.e. SpraySimulation/) first.
     </tr>
 </table>
 
+<p class="tb-title">Table 3. Symbolic links for the submodules.</p>
+<table>
+    <tr>
+        <th>Submodule Name</th>L
+        <th>Link Target</th>
+    </tr>
+    <tr>
+        <td>PointCloud</td>
+        <td>../../Submodules/PointCloud/PointCloud</td>
+    </tr>
+    <tr>
+        <td>KDTree</td>
+        <td>../../Submodules/KDTree/Assets/Datastructure</td>
+    </tr>
+    <tr>
+        <td>UnityVehicleTool</td>
+        <td>../../Submodules/UnityVehicleTools</td>
+    </tr>
+    <tr>
+        <td>datasacks</td>
+        <td>../../Submodules/datasacks/datasacks/Assets/Datasack/Core/DatasackFormatting.cs</td>
+    </tr>
+</table>
 
-<p class="tb-title">Table 3. The game object is listed in Hierarchy window and attribute shows in Inspector window.</p>
+<p class="tb-title">Table 4. The game object is listed in Hierarchy window and attribute shows in Inspector window.</p>
 <table>
     <tr>
         <th rowspan="2">Game Object</th>
@@ -184,14 +210,14 @@ Finally, use Unity open this folder(i.e. SpraySimulation/) first.
         <td colspan="2">Common Setting</td>
         <td colspan="4">
             <ol>
-                <li>Set velocity of the ego vehicle in different sequences. See Table 4.</li>
+                <li>Set velocity of the ego vehicle in different sequences. See Table 5.</li>
                 <li>Set wind field data according to the vehicle velocity at <code>_WindFieldLoader</code>. For example, the wind field of each sequence  mentioned in our method shows in Table 4. Note that wind field data is placed at <code>Assets/WindFieldData</code>. See Table 4.</li>
             </ol>
         </td>
     </tr>
 </table>
 
-<p class="tb-title">Table 4</p>
+<p class="tb-title">Table 5</p>
 <table>
     <tr>
         <th>Sequence Index / Name</th>
@@ -228,30 +254,6 @@ Finally, use Unity open this folder(i.e. SpraySimulation/) first.
         <td>seg138</td>
         <td>25</td>
         <td>veh25_0.20.csv</td>
-    </tr>
-</table>
-
-<p class="tb-title">Table 5. Symbolic links for the submodules.</p>
-<table>
-    <tr>
-        <th>Submodule Name</th>L
-        <th>Link Target</th>
-    </tr>
-    <tr>
-        <td>PointCloud</td>
-        <td>../../Submodules/PointCloud/PointCloud</td>
-    </tr>
-    <tr>
-        <td>KDTree</td>
-        <td>../../Submodules/KDTree/Assets/Datastructure</td>
-    </tr>
-    <tr>
-        <td>UnityVehicleTool</td>
-        <td>../../Submodules/UnityVehicleTools</td>
-    </tr>
-    <tr>
-        <td>datasacks</td>
-        <td>../../Submodules/datasacks/datasacks/Assets/Datasack/Core/DatasackFormatting.cs</td>
     </tr>
 </table>
 
