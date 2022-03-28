@@ -4,7 +4,7 @@ This is the official code release of the paper [Reconstruction and Synthesis of 
 ## Acknowledgment
 This project refers to the manipulation of point cloud defined in [PointCloud](https://github.com/MaikelH/Pointcloud) by [MaikelH](https://github.com/MaikelH), which is licensed under LGPL-2.1. We didn't modify the content but included the data structure in this project.
 
-We would like to thank the authors of [RapidJSON](https://github.com/Tencent/rapidjson/)(MIT) by [Tencent](https://github.com/Tencent), [KDTree](https://github.com/viliwonka/KDTree)(MIT) by [Vili Volčini](https://github.com/viliwonka), [VehicleTools](https://github.com/Unity-Technologies/VehicleTools)(MIT) by [Unity Technologies](https://github.com/Unity-Technologies), and [datasacks](https://github.com/kurtdekker/datasacks)([BSD](https://github.com/kurtdekker/datasacks/blob/master/license_bsd.txt)) by [Kurt Dekker](https://github.com/kurtdekker) for their great work.
+We would like to thank the authors of [rapidjson](https://github.com/Tencent/rapidjson/)(MIT) by [Tencent](https://github.com/Tencent), [KDTree](https://github.com/viliwonka/KDTree)(MIT) by [Vili Volčini](https://github.com/viliwonka), [VehicleTools](https://github.com/Unity-Technologies/VehicleTools)(MIT) by [Unity Technologies](https://github.com/Unity-Technologies), and [datasacks](https://github.com/kurtdekker/datasacks)([BSD](https://github.com/kurtdekker/datasacks/blob/master/license_bsd.txt)) by [Kurt Dekker](https://github.com/kurtdekker) for their great work.
 
 ## Citation
 If you find this work useful, please consider citing our paper.
@@ -87,7 +87,7 @@ ReconstructRefPath=
 ManipulationCheckConfig=../Config/ManipulationCheck.txt
 DefaultFilter=
 ```
-Then link the 4 submodules installed eariler to (or copy to) the Assets folder (i.e. `SpraySimulation/Assets`).
+Create Plugins folder under Assets folder. Then create symbolic links for the 4 submodules installed eariler to (or copy to) the Assets/Plugins folder (i.e. `SpraySimulation/Assets`). The corresponding links show in table 5.
 
 Finally, use Unity open this folder(i.e. SpraySimulation/) first.
 <p class="tb-title">Table 2.</p>
@@ -231,15 +231,39 @@ Finally, use Unity open this folder(i.e. SpraySimulation/) first.
     </tr>
 </table>
 
+<p class="tb-title">Table 5. Symbolic links for the submodules.</p>
+<table>
+    <tr>
+        <th>Submodule Name</th>L
+        <th>Link Target</th>
+    </tr>
+    <tr>
+        <td>PointCloud</td>
+        <td>../../Submodules/PointCloud/PointCloud</td>
+    </tr>
+    <tr>
+        <td>KDTree</td>
+        <td>../../Submodules/KDTree/Assets/Datastructure</td>
+    </tr>
+    <tr>
+        <td>UnityVehicleTool</td>
+        <td>../../Submodules/UnityVehicleTools</td>
+    </tr>
+    <tr>
+        <td>datasacks</td>
+        <td>../../Submodules/datasacks/datasacks/Assets/Datasack/Core/DatasackFormatting.cs</td>
+    </tr>
+</table>
+
 #### Usage
 1. Open this folder with Unity.
 2. Open the scene named "SpraySimple".
 3. Check the parameters mentioned above.
 4. `Navigation bar` > `Window` > `General` > `Recorder` > `Recorder Window`, open the recorder window.
-5. Set parameters in the recorder window. Table 5 shows parameters used in our method.
+5. Set parameters in the recorder window. Table 6 shows parameters used in our method.
 6. Start recording.
 
-<p class="tb-title">Table 5. Parameters for the recorder.</p>
+<p class="tb-title">Table 6. Parameters for the recorder.</p>
 <table>
     <tr>
         <th>Parameter</th>L
@@ -296,7 +320,7 @@ Finally, use Unity open this folder(i.e. SpraySimulation/) first.
 * Main file location: `Tools/PCD_MergePointCloud`
 * Usage: Merge point clouds.
 * Other details are noted in main.cpp.
-* We use [RapidJSON](https://github.com/Tencent/rapidjson/) as the JSON parser.
+* We use [rapidjson](https://github.com/Tencent/rapidjson/) as the JSON parser.
 
 ## Contributor
 * [Yi Chien "Alan" Shih](https://github.com/alan0201tw)
