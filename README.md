@@ -34,9 +34,8 @@ Remember to install submodules listed in `.gitmodules`.
 
 ### File Organization
 There are 3 folders in the zipped file. 
-1. DetectionAnalyzer
-2. SpraySimulation
-3. Tools
+1. SpraySimulation
+2. Tools
 
 Table 1 shows the corresponding implementation for the different steps. Note that the name of the scene used under Unity simulation is SpraySimSimple.
 
