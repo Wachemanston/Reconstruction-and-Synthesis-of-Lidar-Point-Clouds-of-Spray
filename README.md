@@ -86,7 +86,7 @@ ReconstructRefPath=
 ManipulationCheckConfig=../Config/ManipulationCheck.txt
 DefaultFilter=
 ```
-Create Plugins folder under Assets folder. Then create symbolic links for the 4 submodules installed eariler to (or copy to) the Assets/Plugins folder (i.e. `SpraySimulation/Assets`). The corresponding links show in table 3.
+Create Plugins folder under Assets folder. Then create symbolic links for the 4 submodules installed eariler to (or copy to) the Assets/Plugins folder (i.e. `SpraySimulation/Assets`). The linking commands show in table 3.
 
 Next, use Unity open this folder(i.e. SpraySimulation/).
 
@@ -134,24 +134,27 @@ If you open the project with safe mode, something is wrong. Please deal with the
 <p class="tb-title">Table 3. Symbolic links for the submodules.</p>
 <table>
     <tr>
-        <th>Submodule Name</th>L
-        <th>Link Target</th>
+      <td colspan="2">First, <code>cd</code> to the directory <code>SpraySimulation/Assets/Plugins/</code></td>
+    </tr>
+    <tr>
+        <th>Submodule</th>L
+        <th>Link Command</th>
     </tr>
     <tr>
         <td>PointCloud</td>
-        <td>../../Submodules/PointCloud/PointCloud</td>
+        <td><code>ln -s ../../Submodules/PointCloud/PointCloud PointCloud</code></td>
     </tr>
     <tr>
         <td>KDTree</td>
-        <td>../../Submodules/KDTree/Assets/Datastructure</td>
+        <td><code>ln -s ../../Submodules/KDTree/Assets/Datastructures KDTree</code></td>
     </tr>
     <tr>
         <td>UnityVehicleTool</td>
-        <td>../../Submodules/UnityVehicleTools</td>
+        <td><code>ln -s ../../Submodules/UnityVehicleTools UnityVehicleTool</code></td>
     </tr>
     <tr>
         <td>datasacks</td>
-        <td>../../Submodules/datasacks/datasacks/Assets/Datasack/Core/DatasackFormatting.cs</td>
+        <td><code>ln -s ../../Submodules/datasacks/datasacks/Assets/Datasack/Core/DatasackFormatting.cs .</code></td>
     </tr>
 </table>
 
